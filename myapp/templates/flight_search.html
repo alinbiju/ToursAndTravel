@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tour and Travel</title>
+
+    <!-- external css link  -->
+    <link rel="stylesheet" href="{% static 'css/flights.css' %}">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+<body>
+    <!-- header starts -->
+
+    <header>
+        <a href="{% url 'home' %}"><img src="{% static 'images/logo.png' %}" class="logo"></a>
+        <div class="navbar" id="navbar">
+        <ul class="nav-links">
+            <li><a href="{% url 'holiday' %}" >Holidays</a></li>
+            <li><a href="{% url 'hotels' %}">Hotels</a></li>
+            <li><a href="#" style="background-color:#1d87a7; color: #fff;">Flights</a></li>
+            <!-- <li><a href="#">Trains</a></li> -->
+            <li><a href="{% url 'bus' %}">Buses</a></li>
+            <li><a href="#abt">About Us</a></li>
+        </ul>
+        <a href="{% url 'logout' %}" class="login-btn">Logout</a>
+
+        <a href="javascript:void(0);" class="icon" onclick="myFunction()">
+            <i class="fa fa-bars"></i>
+          </a>
+    </div>
+    </header>
+
+    <div class="useless"></div>
+
+     <!-- header ends  -->
+
+    <!-- form starts here  -->
+    <div class="bg">
+    <div class="search">
+        <form action="{% url 'flights' %}" method="POST">
+            {% csrf_token %}
+            <i class="fas fa-plane"></i>
+
+            <div class="dest">
+            <label>Depart From</label>
+            <input type="text" placeholder="New Delhi (DEL)" value="" name="departure" required>
+            </div>
+
+        <div class="dept">
+            <label>Going To</label>
+            <input type="text" placeholder="Mumbai (BOM)" name="destination" required>
+
+        </div>
+
+        <div class="dept">
+            <label for="departure">Departure Date</label>
+            <input type="date">
+
+        </div>
+
+        <div class="dept">
+            <label for="return">Return Date</label>
+            </p>Book Round Trip to save extra </p>
+
+        </div>
+
+        <div class="dept">
+            <label for="traveller">Traveller(s), Class</label>
+            <input type="number">
+
+        </div>
+
+        <div class="check-boxes">
+        <div class="checkbox">
+            <input type="checkbox"><label>Non Stop Flights</label>
+        </div>
+
+        <div class="checkbox-1">
+            <input type="checkbox"><label>Student Fare</label>
+        </div>
+        <div class="checkbox-2">
+            <input type="checkbox"><label>Senior Citizen</label>
+        </div>
+    </div>
+
+            <input type="submit" value="Search Flights" class="btn">
+        </form>
+    </div>
+        </div>
+
+    <!-- form ends here  -->
+
+
+     <!-- footer section starts here  -->
+
+ <footer>
+    <div class="abt" id="abt">
+    <h3>About Us</h3>
+
+      <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.
+        Accusantium dolorum quos ipsa ex totam? Eum ipsam provident excepturi mollitia distinctio expedita
+        inventore nemo minima quae.</p>
+  </div>
+
+  <div class="contact">
+    <h3>Contact Us</h3>
+    <i class="fas fa-phone-square-alt"></i> +91 85479 54763
+    <br>
+    <i class="fas fa-envelope"></i> abc@gmail.com
+  </div>
+
+  <div class="subscribe">
+    <h3>Subscribe Us</h3>
+    <input type="text" placeholder="Enter email address">
+    <input type="submit" value="Send" class="btn-form">
+  </div>
+
+  <div class="social">
+    <i class="fab fa-twitter-square"></i>
+    <i class="fab fa-facebook-square"></i>
+    <i class="fab fa-instagram-square"></i>
+    <i class="fab fa-youtube"></i>
+  </div>
+  </footer>
+
+  <!-- footer section ends here  -->
+
+
+         <!-- external js file  -->
+    <script type="text/javascript" src="{% static 'js/script.js' %}"></script>
+</body>
+</html>

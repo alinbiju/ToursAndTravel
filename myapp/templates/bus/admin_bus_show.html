@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tour and Travel</title>
+
+    <!-- external css link  -->
+    <link rel="stylesheet" href="{% static 'css/admin_hotel_show.css' %}">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+<body>
+
+    <!-- header starts -->
+
+    <header>
+        <img src="{% static 'images/logo.png' %}" class="logo">
+        <div class="navbar" id="navbar">
+        <ul class="nav-links">
+        </ul>
+        <a href="{% url 'admin_logout' %}" class="login-btn">Logout</a>
+
+        <a href="javascript:void(0);" class="icon" onclick="myFunction()">
+            <i class="fa fa-bars"></i>
+          </a>
+    </div>
+    </header>
+
+
+
+    <!-- header ends  -->
+
+    <div class="content">
+        <div class="content-1" style="font-size:15px">
+        <table>
+            <form action="" method="POST">
+            {% csrf_token %}
+            <tr>
+                <td colspan="5"><input name="username"></td>
+                <td colspan="6"><button type="submit">Search</button></td>
+                <td colspan="2"><button>INSERT</button></td>
+            </tr>
+            </form>
+
+            <tr>
+                <th>ID</th>
+                <th>bus_name</th>
+                <th>departure</th>
+                <th>destination</th>
+                <th>duration</th>
+                <th>departure_time</th>
+                <th>arrival</th>
+                <th>price</th>
+                <th>seat_left</th>
+
+            </tr>
+
+            {% for i in data %}
+             <tr>
+                <td>{{ i.id }}</td>
+                <td>{{ i.bus_name }}</td>
+                <td>{{ i.departure }}</td>
+                <td>{{ i.destination }}</td>
+                <td>{{ i.duration }}</td>
+                <td>{{ i.departure_time }}</td>
+                <td>{{ i.arrival }}</td>
+                <td>{{ i.price }}</td>
+                <td>{{ i.seat_left }}</td>
+
+                <td><a href="edit/{{ i.id }}">Edit</a></td>
+                <td><a href="delete/{{ i.id }}">Delete</a></td>
+            </tr>
+            {% endfor %}
+        </table>
+        </div>
+    </div>
+
+
+
+
+
+      <!-- external js file  -->
+      <!-- <script type="text/javascript" src="js/script.js"></script> -->
+</body>
+</html>

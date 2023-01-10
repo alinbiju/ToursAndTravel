@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<form action="{% url 'success' %}" method="POST">
+    {% csrf_token %}
+     <script src="https://checkout.razorpay.com/v1/checkout.js"
+                    data-key="rzp_test_j6zKRXbm19WPTB"
+                    data-amount="{{ data2.pack_price }}00"
+                    data-currency="INR"
+                    data-order_id="{{ payment.id }}"
+                    data-buttontext="Pay with Razorpay"
+                    data-name="{{ data2.pack_name }}"
+                    data-description="Enjoy Your Trip"
+                    data-prefill.name="Gaurav Kumar"
+                    data-prefill.email="gaurav.kumar@example.com"
+                    data-theme.color="#1d87a7"></script>
+</form>
+</body>
+</html>

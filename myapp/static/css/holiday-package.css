@@ -1,0 +1,516 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;1,100;1,300&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+html{
+  scroll-behavior: smooth;
+}
+
+body::-webkit-scrollbar{
+  width: 11px;
+}
+
+body::-webkit-scrollbar-track{
+  background: #fff;
+}
+
+body::-webkit-scrollbar-thumb {
+  background-color: #1d87a7;;
+}
+
+/* header css starts here  */
+
+header{
+    position: relative;
+    top: 0;
+    left: 0;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    transition: 0.6s;
+    padding: 0px 20px;
+    z-index: 10000;
+    background-color: #1d87a7;
+    border-radius: 0 0 30px 30px;
+  }
+
+
+
+  header .logo{
+    position: relative;
+    width: 52px;
+    transition: 0.6s;
+    background-color: #fff;
+    padding: 10px;
+    border-radius: 50%;
+    cursor: pointer;
+  }
+
+  .navbar {
+    display: contents;
+    justify-content: center;
+    padding: 0 50px;
+    position: relative;
+    width: 100%;
+}
+
+
+
+.login-btn {
+    color: #1d87a7;
+    background: #fff;
+    padding: 10px 20px;
+    text-decoration: none;
+    font-size: 20px;
+    font-weight: 900;
+    border-radius: 30px;
+}
+
+.login-btn:hover{
+    color: #fff;
+    background: #1d87a7;
+    border-color: #fff;
+    border-style: solid;
+    transition: 0.2s;
+}
+
+.sticky .login-btn:hover{
+    border-color: #1d87a7;
+    border-style: solid;
+}
+
+.navbar .icon {
+  display: none;
+  color: #1d87a7;
+  font-weight: 700;
+  font-size: 25px;
+}
+
+
+.title {
+  color: #fff;
+  font-size: 25px;
+  font-weight: 700;
+}
+
+/* header css ends here  */
+
+
+
+
+
+/* search css starts */
+
+.search {
+    position: relative;
+    margin: 15px 0px;
+    padding: 17px 20px;
+    box-shadow: rgb(100 100 111 / 20%) 0px 7px 29px 0px;
+    border-radius: 30px;
+    background-color: #fff;
+}
+
+.search i {
+    font-size: 34px;
+    padding-right: 17px;
+    color: #1d87a7;
+}
+
+form {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+}
+
+.dest{
+    width: 100%;
+}
+
+.dept{
+    width: 100%;
+}
+
+label {
+    font-size: 25px;
+    font-weight: 500;
+    color: #1d87a7;
+}
+
+input{
+    border-radius: 20px;
+    border: 1px solid #18657c;
+}
+
+.search input[type="text"] {
+    position: relative;
+    display: flex;
+    width: 70%;
+    padding: 10px;
+}
+
+.btn-2 {
+    padding: 0 46px;
+    margin: 22px 0;
+    font-size: 18px;
+    color: #fff;
+    background: #1d87a7;
+    border: none;
+    border-radius: 20px;
+    cursor: pointer;
+}
+
+.btn-2:hover{
+    opacity: 0.8;
+}
+
+
+/* search css ends */
+
+
+
+
+.title-1 span {
+  border: 1px solid #aaa;
+  padding: 0 5px;
+  color: #78cbe4;
+}
+
+.title-2 {
+  color: #1d87a7;
+  font-size: 25px;
+  font-weight: 700;
+}
+
+.box {
+  display: flex;
+  flex-direction: column;
+  margin: 20px 10px;
+  padding: 0 30px;
+}
+
+.pack-title {
+  display: flex;
+  justify-content: space-between;
+  padding: 0 17px;
+  padding-top: 15px;
+  top: 0;
+  background: #fff;
+  position: sticky;
+  margin-bottom: 15px;
+  z-index: 100;
+}
+
+.content-1 {
+  position: relative;
+  display: flex;
+  gap: 20px;
+  align-items: center;
+}
+
+.btn-1 {
+  margin: 15px;
+  padding: 5px 18px;
+  border: none;
+  color: #fff;
+  background: #1d87a7;
+  cursor: pointer;
+}
+
+.btn-1:hover{
+  opacity: 0.8;
+}
+
+.carousel {
+  position: relative;
+  width: 100%;
+}
+
+
+.pack-details {
+padding: 10px;
+display: flex;
+}
+
+.details {
+  width: auto;
+  padding: 0 25px;
+}
+
+.details i {
+  font-size: 25px;
+  padding-right: 10px;
+  color: #1d87a7;
+}
+
+.details span {
+  font-size: 25px;
+  padding-right: 10px;
+  color: #1d87a7;
+}
+
+
+.inc {
+  font-size: 25px;
+  padding-top: 10px;
+  color: #1d87a7;
+}
+
+.st-pln{
+  padding: 13px 0;
+}
+
+.st-pln i{
+  font-size: 15px;
+}
+
+img{
+  border-radius: 20px;
+}
+
+.overview{
+  padding: 15px 17px;
+}
+
+.overview h2 {
+  font-size: 25px;
+  padding-right: 10px;
+  color: #1d87a7;
+  font-weight: 400;
+  padding-bottom: 10px;
+}
+
+/* readmore */
+#more {
+  display: none;
+}
+
+#myBtn {
+  margin: 0px;
+  padding: 5px 8px;
+  border: none;
+  color: #fff;
+  background: #1d87a7;
+  cursor: pointer;
+  border-radius: 20px;
+}
+
+#myBtn:hover{
+  opacity: 0.8;
+}
+
+/* timeline css starts here  */
+
+
+
+/* Timeline Container */
+.timeline {
+  background: var(--primary-color);
+  margin: 20px 50px;
+  padding: 20px;
+  display: flex;
+  justify-content: left;
+  box-shadow: rgb(100 100 111 / 20%) 0px 7px 29px 0px;
+  border-radius: 30px;
+}
+
+/* Outer Layer with the timeline border */
+.outer {
+  border-left: 2px solid #1d87a7;
+}
+
+/* Card container */
+.card-1 {
+  position: relative;
+  margin: 0 0 20px 20px;
+  /* padding: 10px; */
+  background: #fff;
+  border-radius: 8px;
+  /* max-width: 65%; */
+  width: 120%;
+  border: 2px solid rgb(29 135 167);
+  box-shadow: rgb(100 100 111 / 20%) 0px 7px 29px 0px;
+}
+
+
+/* Information about the timeline */
+.info {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+/* Title of the card */
+.title {
+  color: #1d87a7;
+  position: relative;
+}
+/* Timeline dot  */
+.title::before {
+  content: "";
+  position: absolute;
+  width: 20px;
+  height: 20px;
+  background: white;
+  border-radius: 999px;
+  left: -33px;
+  border: 3px solid #1d87a7;
+}
+
+.cont {
+  display: flex;
+  justify-content: space-between;
+  /* box-shadow: rgb(100 100 111 / 20%) 0px 7px 29px 0px; */
+  padding: 10px;
+  margin: 2px 0;
+  border-radius: 10px;
+}
+.cont i {
+  position: relative;
+  font-size: 20px;
+}
+
+.cont img {
+  width: 30%;
+  border-radius: 13px;
+}
+
+.content-left {
+  color: #0d495c;
+  padding-left: 33px;
+}
+
+.content-right {
+    display: flex;
+    flex-direction: column;
+    align-content: center;
+    align-items: center;
+}
+
+/* The Modal (background) */
+.modal {
+  display: none; /* Hidden by default */
+  position: fixed; /* Stay in place */
+  z-index: 1; /* Sit on top */
+  left: 0;
+  top: 0;
+  width: 100%; /* Full width */
+  height: 100%; /* Full height */
+  overflow: auto; /* Enable scroll if needed */
+  background-color: rgb(0,0,0); /* Fallback color */
+  background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+}
+
+/* Modal Content/Box */
+.modal-cont-1 {
+    background-color: #fefefe;
+    margin: 15% auto;
+    padding: 20px;
+    border: 1px solid #888;
+    width: 70%;
+    border-radius: 25px;
+}
+
+/* The Close Button */
+.close {
+  color: #aaa;
+  float: right;
+  font-size: 28px;
+  font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+  color: black;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+
+/* Style the button that is used to open and close the collapsible content */
+.collapsible {
+  background-color: #fff;
+  color: #1d87a7;
+  cursor: pointer;
+  padding: 10px;
+  width: 100%;
+  border: none;
+  text-align: left;
+  outline: none;
+  font-size: 20px;
+  transition: 0.3s;
+  border-radius: 10px;
+}
+
+/* Add a background color to the button if it is clicked on (add the .active class with JS), and when you move the mouse over it (hover) */
+.active, .collapsible:hover {
+  background-color: #1d87a7;
+  border-radius: 5px 5px 0 0;
+  color: #fff;
+
+}
+
+/* Style the collapsible content. Note: hidden by default */
+
+.content-2 {
+  /* padding: 0 18px; */
+  background-color: white;
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.2s ease-out;
+}
+
+/* timeline css ends here  */
+
+
+
+
+
+
+/* footer css starts here  */
+
+footer {
+    position: relative;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: #1d86a6;
+    width: auto;
+    color: #fff;
+    /* padding: 46px; */
+    text-align: center;
+  }
+
+  .abt{
+    padding-bottom: 49px;
+  }
+
+  .contact{
+    padding-bottom: 30px;
+  }
+
+  .subscribe input{
+      font-size: 15px;
+      margin: 10px;
+      padding: 5px;
+      width: 30%;
+  }
+  .social i {
+    font-size: 31px;
+    margin: 24px 24px;
+  }
+
+  /* footer css ends here  */
+
+
+
+
+
+
+
+

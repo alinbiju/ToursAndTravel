@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tour and Travel</title>
+
+    <!-- external css link  -->
+    <link rel="stylesheet" href="{% static 'css/hotels.css' %}">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+<body>
+
+     <!-- header starts -->
+
+     <header>
+        <a href="/index.html"><img src="{% static 'images/logo.png' %}" class="logo"></a>
+        <div class="navbar" id="navbar">
+        <ul class="nav-links">
+            <li><a href="{% url 'holiday' %}">Holidays</a></li>
+            <li><a href="{% url 'hotels' %}" style="background-color:#1d87a7; color: #fff;">Hotels</a></li>
+            <li><a href="flights.html">Flights</a></li>
+            <!-- <li><a href="#">Trains</a></li> -->
+            <li><a href="buses.html">Buses</a></li>
+            <li><a href="#abt">About Us</a></li>
+        </ul>
+        <a href="{% url 'logout' %}" class="login-btn">Logout</a>
+
+        <a href="javascript:void(0);" class="icon" onclick="myFunction()">
+            <i class="fa fa-bars"></i>
+          </a>
+    </div>
+    </header>
+
+    <div class="useless"></div>
+
+     <!-- header ends  -->
+
+     <!-- search section starts here  -->
+
+    <div class="search">
+        <form action="{% url 'hotelSearch' %}" method="POST">
+            {% csrf_token %}
+          <i class="fas fa-hotel"></i>
+
+            <div class="dest">
+            <label for="destination">Destination</label>
+            <input type="text" placeholder="Enter destination" name="searched">
+            </div>
+
+        <div class="dept">
+            <label for="departure">Check-in</label>
+            <input type="date">
+
+        </div>
+
+        <div class="dept">
+            <label for="departure">Check-out</label>
+            <input type="date">
+
+        </div>
+
+        <div class="dest">
+            <label for="destination">Traveller and Hotel</label>
+            <input type="number" placeholder="Enter destination">
+            </div>
+
+            <input type="submit" value="Search Hotels" class="btn">
+        </form>
+    </div>
+
+    <!-- search section ends here  -->
+
+     <!-- hotels section starts here  -->
+
+     <div class="title"><h1>Recent Viewed</h1></div>
+     <div class="box-container">
+         {% for i in data %}
+     <div class="hotel-box">
+        <div class="image"><img src="{{ i.image.url }}" alt="" style="width:50%"></div>
+        <div class="content">
+          <h2>{{ i.hotel_name }}</h2>
+          <i class="fas fa-star"></i>
+          <i class="fas fa-star"></i>
+          <i class="fas fa-star"></i>
+          <i class="fas fa-star"></i>
+          <i class="fas fa-star-half"></i>
+          <br>
+
+          <div class="detail">
+
+          <i class="fas fa-map-marker-alt"></i> {{ i.city_id.city_name }} , {{ i.state_id.state_name }}
+
+          <div class="price"><span><i class="fas fa-rupee-sign"></i>4,500</span><i class="fas fa-rupee-sign"></i>{{ i.price }}</div>
+        </div>
+
+            <a href="{% url 'hotelDetails' i.id %}"> <button class="btn">Choose Room</button> </a>
+        </div>
+      </div>
+{% endfor %}
+     </div>
+
+
+     <!-- hotels section ends here  -->
+
+
+ <!-- footer section starts here  -->
+
+ <footer>
+    <div class="abt" id="abt">
+    <h3>About Us</h3>
+
+      <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.
+        Accusantium dolorum quos ipsa ex totam? Eum ipsam provident excepturi mollitia distinctio expedita
+        inventore nemo minima quae.</p>
+  </div>
+
+  <div class="contact">
+    <h3>Contact Us</h3>
+    <i class="fas fa-phone-square-alt"></i> +91 85479 54763
+    <br>
+    <i class="fas fa-envelope"></i> abc@gmail.com
+  </div>
+
+  <div class="subscribe">
+    <h3>Subscribe Us</h3>
+    <input type="text" placeholder="Enter email address">
+    <input type="submit" value="Send" class="btn-form">
+  </div>
+
+  <div class="social">
+    <i class="fab fa-twitter-square"></i>
+    <i class="fab fa-facebook-square"></i>
+    <i class="fab fa-instagram-square"></i>
+    <i class="fab fa-youtube"></i>
+  </div>
+  </footer>
+
+  <!-- footer section ends here  -->
+
+
+
+    <!-- external js file  -->
+    <script type="text/javascript" src="{% static 'js/script.js' %}"></script>
+</body>
+</html>

@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Edit</title>
+</head>
+<body>
+        <form method="POST" action="/admin_user_update/{{ data.id }}">
+            {% csrf_token %}
+              <table border="1" align="center" cellpadding="10" cellspacing="0">
+                  <tr>
+                      <td>NAME:</td>
+                      <td><input type="text" id="username"  name="username" value="{{ data.username }}"></td>
+                  </tr>
+                  <tr>
+                         <td>EMAIL:</td>
+                      <td><input type="text"  id="email" name="email" value="{{ data.email }}"></td>
+                  </tr>
+                <tr>
+                      <td>PASSWORD:</td>
+                      <td><input type="text" id="password" name="password" value="{{ data.password }}"></td>
+                  </tr>
+                  <tr>
+                      <td colspan="2" align="center"><input type="submit" name="submit" id="submit"></td>
+                  </tr>
+
+              </table>
+        </form>
+</body>
+</html>

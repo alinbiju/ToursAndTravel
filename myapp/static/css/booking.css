@@ -1,0 +1,202 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;1,100;1,300&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+html{
+  scroll-behavior: smooth;
+}
+
+body{
+  background-image: url("/static/images/doodle.jpg");
+  background-size: cover;
+}
+
+body::-webkit-scrollbar{
+  width: 11px;
+}
+
+body::-webkit-scrollbar-track{
+  background: #fff;
+}
+
+body::-webkit-scrollbar-thumb {
+  background-color: #1d87a7;;
+}
+
+/* header css starts here  */
+
+header{
+    position: relative;
+    top: 0;
+    left: 0;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    transition: 0.6s;
+    padding: 0px 20px;
+    z-index: 10000;
+    background-color: #1d87a7;
+    border-radius: 0 0 30px 30px;
+  }
+
+
+
+  header .logo{
+    position: relative;
+    width: 52px;
+    transition: 0.6s;
+    background-color: #fff;
+    padding: 10px;
+    border-radius: 50%;
+    cursor: pointer;
+  }
+
+  .navbar {
+    display: contents;
+    justify-content: center;
+    padding: 0 50px;
+    position: relative;
+    width: 100%;
+}
+
+
+
+.login-btn {
+    color: #1d87a7;
+    background: #fff;
+    padding: 10px 20px;
+    text-decoration: none;
+    font-size: 20px;
+    font-weight: 900;
+    border-radius: 30px;
+}
+
+.login-btn:hover{
+    color: #fff;
+    background: #1d87a7;
+    border-color: #fff;
+    border-style: solid;
+    transition: 0.2s;
+}
+
+.sticky .login-btn:hover{
+    border-color: #1d87a7;
+    border-style: solid;
+}
+
+.navbar .icon {
+  display: none;
+  color: #1d87a7;
+  font-weight: 700;
+  font-size: 25px;
+}
+
+
+.title {
+  color: #fff;
+  font-size: 25px;
+  font-weight: 700;
+}
+
+/* header css ends here  */
+h3 {
+  padding-bottom: 15px;
+}
+
+.row {
+  display: flex;
+  flex-wrap: wrap;
+  margin: 25px;
+}
+
+.col-25 {
+  -ms-flex: 25%; /* IE10 */
+  flex: 25%;
+}
+
+.col-50 {
+  -ms-flex: 50%; /* IE10 */
+  flex: 50%;
+}
+
+.col-75 {
+  -ms-flex: 75%; /* IE10 */
+  flex: 75%;
+}
+
+.col-25,
+.col-50,
+.col-75 {
+  padding: 0 16px;
+}
+
+.container {
+  background-color: #ffffff;
+  padding: 30px;
+  border-radius: 30px;
+  box-shadow: rgb(0 0 0 / 20%) 0px 20px 30px;
+  color: #1d87a7;
+}
+
+input {
+  width: 100%;
+  margin-bottom: 20px;
+  padding: 12px;
+  border: 1px solid #ccc;
+  border-radius: 20px;
+}
+
+label {
+  margin-bottom: 10px;
+  display: block;
+}
+
+.icon-container {
+  margin-bottom: 20px;
+  padding: 7px 0;
+  font-size: 24px;
+}
+
+.btn {
+  background-color: #1d87a7;
+  color: white;
+  padding: 12px;
+  margin: 10px 0;
+  border: none;
+  width: 50%;
+  cursor: pointer;
+  font-size: 17px;
+  border-radius: 30px;
+}
+
+.btn:hover {
+  background-color: #45a049;
+}
+
+span.price {
+  float: right;
+  color: grey;
+}
+
+/* Responsive layout - when the screen is less than 800px wide, make the two columns stack on top of each other instead of next to each other (and change the direction - make the "cart" column go on top) */
+@media (max-width: 800px) {
+  .row {
+    flex-direction: column-reverse;
+  }
+  .col-25 {
+    margin-bottom: 20px;
+  }
+}
+
+
+
+
+
+
+

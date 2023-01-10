@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tour and Travel</title>
+
+    <!-- external css link  -->
+    <link rel="stylesheet" href="{% static 'css/admin_home.css' %}">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+<body>
+
+    <!-- header starts -->
+
+    <header>
+        <img src="{% static 'images/logo.png' %}" class="logo">
+        <div class="navbar" id="navbar">
+        <ul class="nav-links">
+            <!-- <li><a href="holiday.html">Holidays</a></li>
+            <li><a href="hotels.html">Hotels</a></li>
+            <li><a href="flights.html">Flights</a></li>
+            <li><a href="#">Trains</a></li> -->
+            <!-- <li><a href="buses.html">Buses</a></li>
+            <li><a href="#abt">About Us</a></li> -->
+        </ul>
+        <a href="{% url 'admin_logout' %}" class="login-btn">Logout</a>
+
+        <a href="javascript:void(0);" class="icon" onclick="myFunction()">
+            <i class="fa fa-bars"></i>
+          </a>
+    </div>
+    </header>
+
+
+
+    <!-- header ends  -->
+
+    <div class="content">
+        <div class="content-1">
+            <a href="{% url 'admin_users_show' %}"><button>User</button></a>
+            <a href="{% url 'admin_package_show' %}"><button>Holiday Package</button></a>
+            <a href="{% url 'admin_hotel_show' %}"><button>Hotel</button></a>
+            <a href="{% url 'admin_hotelRoom_show' %}"><button>Hotel Rooms</button></a>
+            <a href="#"><button>Flights</button></a>
+            <a href="{% url 'admin_bus_show' %}"><button>Buses</button></a>
+            <a href="{% url 'admin_state_show' %}"><button>State</button></a>
+            <a href="{% url 'admin_city_show' %}"><button>City</button></a>
+            <a href="{% url 'admin_packageDays_show' %}"><button>Package Days</button></a>
+            <a href="{% url 'booking_report' %}"><button>Package Booking Report</button></a>
+            <a href="{% url 'booking_hotel_report' %}"><button>Hotel Booking Report</button></a>
+        </div>
+    </div>
+
+
+
+
+
+      <!-- external js file  -->
+      <!-- <script type="text/javascript" src="js/script.js"></script> -->
+</body>
+</html>

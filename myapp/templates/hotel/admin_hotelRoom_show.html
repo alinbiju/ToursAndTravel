@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tour and Travel</title>
+
+    <!-- external css link  -->
+    <link rel="stylesheet" href="{% static 'css/admin_hotel_show.css' %}">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+<body>
+
+    <!-- header starts -->
+
+    <header>
+        <img src="{% static 'images/logo.png' %}" class="logo">
+        <div class="navbar" id="navbar">
+        <ul class="nav-links">
+        </ul>
+        <a href="{% url 'admin_logout' %}" class="login-btn">Logout</a>
+
+        <a href="javascript:void(0);" class="icon" onclick="myFunction()">
+            <i class="fa fa-bars"></i>
+          </a>
+    </div>
+    </header>
+
+
+
+    <!-- header ends  -->
+
+    <div class="content">
+        <div class="content-1">
+        <table>
+            <form action="" method="POST">
+            {% csrf_token %}
+            <tr>
+                <td colspan="5"><input name="username"></td>
+                <td colspan="6"><button type="submit">Search</button></td>
+            </tr>
+            </form>
+
+            <tr>
+                <th>ID</th>
+                <th>room_name</th>
+                <th>room_type_1</th>
+                <th>room_type_2</th>
+                <th>max_guest_1</th>
+                <th>max_guest_2</th>
+                <th>amenities_1</th>
+                <th>amenities_2</th>
+                <th>amenities_3</th>
+                <th>amenities_4</th>
+                <th>amenities_5</th>
+                <th>inclusions_type_1_1</th>
+                <th>inclusions_type_1_2</th>
+                <th>inclusions_type_1_3</th>
+                <th>inclusions_type_1_4</th>
+                <th>inclusions_type_1_5</th>
+                <th>inclusions_type_2_1</th>
+                <th>inclusions_type_2_2</th>
+                <th>inclusions_type_2_3</th>
+                <th>inclusions_type_2_4</th>
+                <th>inclusions_type_2_5</th>
+                <th>highlights_type_1_1</th>
+                <th>highlights_type_1_2</th>
+                <th>highlights_type_1_3</th>
+                <th>highlights_type_1_4</th>
+                <th>highlights_type_1_5</th>
+                <th>highlights_type_2_1</th>
+                <th>highlights_type_2_2</th>
+                <th>highlights_type_2_3</th>
+                <th>highlights_type_2_4</th>
+                <th>highlights_type_2_5</th>
+                <th>room_price_type_1</th>
+                <th>room_price_type_2</th>
+                <th>image_1</th>
+                <th>hotel_master_id</th>
+            </tr>
+
+            {% for i in data %}
+             <tr>
+                <td>{{ i.id }}</td>
+                <td>{{ i.room_name }}</td>
+                <td>{{ i.room_type_1 }}</td>
+                <td>{{ i.room_type_2 }}</td>
+                <td>{{ i.max_guest_1 }}</td>
+                <td>{{ i.max_guest_2 }}</td>
+                <td>{{ i.amenities_1 }}</td>
+                <td>{{ i.amenities_2 }}</td>
+                <td>{{ i.amenities_3 }}</td>
+                <td>{{ i.amenities_4 }}</td>
+                <td>{{ i.amenities_5 }}</td>
+                <td>{{ i.inclusions_type_1_1 }}</td>
+                <td>{{ i.inclusions_type_1_2 }}</td>
+                <td>{{ i.inclusions_type_1_3 }}</td>
+                <td>{{ i.inclusions_type_1_4 }}</td>
+                <td>{{ i.inclusions_type_1_5 }}</td>
+                <td>{{ i.inclusions_type_2_1 }}</td>
+                <td>{{ i.inclusions_type_2_2 }}</td>
+                <td>{{ i.inclusions_type_2_3 }}</td>
+                <td>{{ i.inclusions_type_2_4 }}</td>
+                <td>{{ i.inclusions_type_2_5 }}</td>
+                <td>{{ i.highlights_type_1_1 }}</td>
+                <td>{{ i.highlights_type_1_2 }}</td>
+                <td>{{ i.highlights_type_1_3 }}</td>
+                <td>{{ i.highlights_type_1_4 }}</td>
+                <td>{{ i.highlights_type_1_5 }}</td>
+                <td>{{ i.highlights_type_2_1 }}</td>
+                <td>{{ i.highlights_type_2_2 }}</td>
+                <td>{{ i.highlights_type_2_3 }}</td>
+                <td>{{ i.highlights_type_2_4 }}</td>
+                <td>{{ i.highlights_type_2_5 }}</td>
+                <td>{{ i.room_price_type_1 }}</td>
+                <td>{{ i.room_price_type_2 }}</td>
+                <td>{{ i.image_1 }}</td>
+                <td>{{ i.hotel_master_id }}</td>
+                <td><a href="edit/{{ i.id }}">Edit</a></td>
+                <td><a href="delete/{{ i.id }}">Delete</a></td>
+            </tr>
+            {% endfor %}
+        </table>
+        </div>
+    </div>
+
+
+
+
+
+      <!-- external js file  -->
+      <!-- <script type="text/javascript" src="js/script.js"></script> -->
+</body>
+</html>
