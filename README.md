@@ -25,6 +25,8 @@ Here we can search the packages you want and it will filter out the results.
 
 
 
+**To run the project use above command**
+
 py -m pip install django
 
 py -m django --version
@@ -35,4 +37,4 @@ py manage.py makemigrations
 py manage.py migrate
 
 py manage.py runserver
-To run the project use above command
+
